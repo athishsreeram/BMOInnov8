@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>BMOInnov8 7thElement</title>
+    <link href="https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+    <link href="https://demos.jquerymobile.com/1.4.5/favicon.ico" rel="shortcut icon">
+    <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
+    <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="bmoinnov8.js"></script>
+    <script>
+
+    </script>
+    <style>
+		.noshadow * {
+			-webkit-box-shadow: none !important;
+			-moz-box-shadow: none !important;
+			box-shadow: none !important;
+		}
+		form.ui-mini .ui-field-contain fieldset.ui-controlgroup legend small {
+			color: #666;
+		}
+
+    </style>
+
+<body>
+<div data-role="page" id="testpage">
+
+    <div data-role="header">
+        <h1>Plan your Money</h1>
+        <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
+           href="#">Back</a>
+        <a class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear" href="#">Button</a>
+
+    </div><!-- /header -->
+
+    <div class="ui-content" role="main">
+
+        <form>
+
+            <div class="ui-body ui-body-a ui-corner-all" id="ui-body-test" style="margin-bottom:1em;">
+                <label for="name2">Dollars:</label>
+                <input data-clear-btn="true" id="name2" name="name2" type="text" value="">
+            </div>
+
+
+            <div class="ui-field-contain">
+                    <select id="select-native-17" name="select-native-17">
+                <option value="">Expense...</option>
+                        
+                <option value="1">GAS</option>
+                        
+                <option value="2">Entertainment</option>
+                        
+                <option value="3">Grocery</option>
+                        
+                <option value="4">Phone Bill</option>
+                    </select>
+            </div>
+
+            <div class="ui-field-contain">
+                <input id="submit-1" type="submit" value="Add To Plan">
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <div data-position="fixed" data-role="footer">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">Plan</a></li>
+                <li><a href="#" onclick="wentto()">Get Started</a></li>
+                <li><a href="#">Savings</a></li>
+            </ul>
+        </div>
+        <h4 style="display:none;">BMO Innov8</h4>
+    </div>
