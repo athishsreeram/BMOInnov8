@@ -11,17 +11,6 @@
     <script src="bmoinnov8.js"></script>
     <script>
 
-        
-   $(document).ready(function(){
-          $("#submit-1").click(function(){
-
-            var selected = $("#select-native-17").find(":selected").text();
-            alert("The Now clicked. "+selected);
-            simpleGet();
-          });
-    });
-
-
     </script>
 	<style>
 		.noshadow * {
@@ -38,7 +27,7 @@
 <div data-role="page" id="testpage">
 
     <div data-role="header">
-        <h1>I Want to</h1>
+        <h1>Start Saving</h1>
         <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
            href="#" onclick="home()">Back</a>
         <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-logout">Logout</a>
@@ -48,19 +37,43 @@
  <div class="ui-content" role="main">
 
      <form>
-         <div class="ui-field-contain">
-                 <select name="select-native-17" id="select-native-17">
-                     <option value="">Expense...</option>
-                     <option value="1">GAS</option>
-                     <option value="2">Entertainment</option>
-                     <option value="3">Grocery</option>
-                     <option value="4">Phone Bill</option>
-                 </select>
+
+         <div class="ui-body ui-body-a ui-corner-all" id="ui-body-test" style="margin-bottom:1em;">
+
+          <a href="#" class="ui-btn ui-icon-alert ui-btn-icon-left" style="color: rgb(250, 0, 0);">
+             <p style="font-size: 12px;">Spending 30$ more than Avg</p>
+              <p style="font-size: 12px;">Your current Bill 90$</p>
+         </a>
+
+
+
+
          </div>
 
          <div class="ui-field-contain">
-                 <input  type="submit" id="submit-1" value="Now">
+             <ul data-role="listview" data-split-icon="gear" data-inset="true">
+                 <li><a href="#">
+                     <img src="https://yt3.ggpht.com/a/AGF-l78OjbKCm9xpOFzl9DE2wzwl-YwMgGFTop4uJA=s900-c-k-c0xffffffff-no-rj-mo">
+                     <h2>Bell</h2>
+                     <p>Monthly Plan 55$ </p></a>
+                     <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="couppur()">Purchase album</a>
+                 </li>
+                 <li><a href="#">
+                     <img src="https://cdn.iphoneincanada.ca/wp-content/uploads/2017/02/new-fido-logo1.png">
+                     <h2>FIDO</h2>
+                     <p>Monthly Plan 45$</p></a>
+                     <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+                 </li>
+                 <li><a href="#">
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm3K7BagAApHY983qV9dsTShcsEa0d4_WIUk2wVk3Xbfd0Xqa_&s">
+                     <h2>Rogers</h2>
+                     <p>Monthly Plan 65$</p></a>
+                     <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+                 </li>
+            </ul>
          </div>
+
+
 
      </form>
 

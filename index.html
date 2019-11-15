@@ -19,6 +19,50 @@
      });
 
     </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['GAS', 8],
+          ['Grocery', 2],
+          ['Entertainments', 4],
+          ['Shopping', 2],
+          ['Transport', 8],
+          ['Communication', 8],
+          ['Housing', 8],
+          ['Insurance', 8]
+        ]);
+
+
+
+          // Optional; add a title and set the width and height of the chart
+          var options = {'title':'Yours Monthly Average $ (CAD)', 'width':380, 'height':400, 'legend':'none' ,
+          pieSliceText: 'label',pieSliceTextStyle: {
+            color: 'black'
+        },
+          slices: {  1: {offset: 0.2},
+                    2: {offset: 0.3},
+                    14: {offset: 0.4},
+                    5: {offset: 0.5},
+          }};
+
+          // Display the chart inside the <div> element with id="piechart"
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+          chart.draw(data, options);
+
+
+        }
+      </script>
+
+
     <style>
 		.noshadow * {
 			-webkit-box-shadow: none !important;
@@ -28,6 +72,8 @@
 		form.ui-mini .ui-field-contain fieldset.ui-controlgroup legend small {
 			color: #666;
 		}
+
+
 
     </style>
 
@@ -47,28 +93,50 @@
         <form>
 
             <div class="ui-body ui-body-a ui-corner-all" id="ui-body-test" style="margin-bottom:1em;">
-                <label for="name2">Dollars:</label>
-                <input data-clear-btn="true" id="name2" name="name2" type="text" value="">
+
+                <a href="#" class="ui-btn ui-icon-alert ui-btn-icon-left" style="color: rgb(250, 0, 0);">
+                    <p style="font-size: 12px;">You can handle $400 unforeseen expenses</p>
+                </a>
+
+                <div data-role="collapsible" data-inset="false">
+                        <h4 align="center" >
+                    <a href="#" >
+                Learn how to improve !!
+                </a> </h4>
+                    <div  id="piechart" ></div>
+
+
+                    <div class="ui-field-contain">
+                        <ul data-role="listview" data-split-icon="gear" data-inset="true">
+                            <li><a href="#">
+                                <img src="https://image.flaticon.com/icons/svg/1034/1034131.svg">
+                                <h2>Communication</h2>
+                                <p>Spending 30$ more than Avg</p></a>
+                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="com();">Purchase album</a>
+                            </li>
+                            <li><a href="#">
+                                <img src="https://image.flaticon.com/icons/svg/565/565374.svg">
+                                <h2>GAS</h2>
+                                <p>Spending 100$ more than Avg</p></a>
+                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+                            </li>
+                            <li><a href="#">
+                                <img src="https://image.flaticon.com/icons/svg/390/390134.svg">
+                                <h2>Entertainments</h2>
+                                <p>Spending 80$ more than Avg</p></a>
+                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase album</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+
             </div>
 
 
-            <div class="ui-field-contain">
-                    <select id="select-native-17" name="select-native-17">
-                <option value="">Expense...</option>
-                        
-                <option value="1">GAS</option>
-                        
-                <option value="2">Entertainment</option>
-                        
-                <option value="3">Grocery</option>
-                        
-                <option value="4">Phone Bill</option>
-                    </select>
-            </div>
-
-            <div class="ui-field-contain">
-                <input id="submit-1" type="submit" value="Add To Plan">
-            </div>
 
         </form>
 

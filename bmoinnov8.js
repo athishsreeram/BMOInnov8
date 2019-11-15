@@ -1,9 +1,16 @@
 function home() {
-            window.location = "http://localhost/BMOInnov8/index.html" ;
+            var base_url = window.location.origin;
+            window.location = base_url+"/BMOInnov8/index.html" ;
 }
 
-function wentto() {
-            window.location = "http://localhost/BMOInnov8/wantto.html" ;
+function couppur() {
+var base_url = window.location.origin;
+            window.location = base_url+"/BMOInnov8/couppur.html" ;
+}
+
+function com() {
+var base_url = window.location.origin;
+            window.location = base_url+"/BMOInnov8/com.html" ;
 }
 
 function simpleGet(){
