@@ -13,9 +13,12 @@
 
         
    $(document).ready(function(){
-  $("submit-1").click(function(){
-    alert("The paragraph was clicked.");xam
-  });
+          $("#submit-1").click(function(){
+
+            var selected = $("#select-native-17").find(":selected").text();
+            alert("The Now clicked. "+selected);
+            simpleGet();
+          });
     });
 
 
@@ -36,17 +39,15 @@
 
     <div data-role="header">
         <h1>I Want to</h1>
-        <a href="#" data-rel="home" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext">Back</a>
-        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear">Button</a>
+        <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
+           href="#" onclick="home()">Back</a>
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-logout">Logout</a>
 
  </div><!-- /header -->
 
  <div class="ui-content" role="main">
 
      <form>
-
-
-
          <div class="ui-field-contain">
                  <select name="select-native-17" id="select-native-17">
                      <option value="">Expense...</option>

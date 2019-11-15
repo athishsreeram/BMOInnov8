@@ -10,6 +10,13 @@
     <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="bmoinnov8.js"></script>
     <script>
+    $(document).ready(function(){
+        $("#submit-1").click(function(){
+            var selected = $('#select-native-17').find(":selected").text();
+            alert("Plan added successfully "+selected);
+            wentto();
+       });
+     });
 
     </script>
     <style>
@@ -30,8 +37,8 @@
     <div data-role="header">
         <h1>Plan your Money</h1>
         <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
-           href="#">Back</a>
-        <a class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-gear" href="#">Button</a>
+           href="#" onclick="home()">Back</a>
+        <a class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-logout" href="#">Button</a>
 
     </div><!-- /header -->
 
