@@ -1,4 +1,8 @@
+To run can use
 
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+or
 
 Install XAMPP
 https://www.apachefriends.org/index.html
