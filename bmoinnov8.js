@@ -1,6 +1,7 @@
 function home() {
             var base_url = window.location.origin;
             window.location = base_url+"/BMOInnov8/index.html" ;
+            simpleGet()
 }
 
 function couppur() {
@@ -18,11 +19,16 @@ var base_url = window.location.origin;
             window.location = base_url+"/BMOInnov8/gas.html" ;
 }
 
+function enter() {
+            var base_url = window.location.origin;
+            window.location = base_url+"/BMOInnov8/enter.html" ;
+}
+
 function simpleGet(){
 
-    $.get("https://jsonplaceholder.typicode.com/posts/1",
+    $.get("https://bmoinnov8.ca/accounts",
     function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
+      console.log("Data: " + data + "\nStatus: " + status);
     });
 
 }

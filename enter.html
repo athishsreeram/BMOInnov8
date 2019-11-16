@@ -9,18 +9,20 @@
     <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
     <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="bmoinnov8.js"></script>
-    <script>
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDy2qmGsbsMxPAP6w8USXf5Ey87y23uYVM&sensor=false&output=html"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
 
-        
-   $(document).ready(function(){
-          $("#submit-1").click(function(){
+        map = showMap(43.653225,-79.383186);
+		addMarkersToMap(map,43.653225,-79.383186,"Ciniplex $12.00/PerPerson");
 
-            var selected = $("#select-native-17").find(":selected").text();
-            alert("The Now clicked. "+selected);
-            simpleGet();
-          });
-    });
+        addMarkersToMap(map,43.654225,-79.383186,"CN Tower $22.39/Person");
 
+        addMarkersToMap(map,43.657225,-79.383186,"Aquarium $10.49/Person");
+
+        addMarkersToMap(map,43.651225,-79.385186,"Kids Planet $5.52/Child");
+     });
 
     </script>
 	<style>
@@ -38,7 +40,7 @@
 <div data-role="page" id="testpage">
 
     <div data-role="header">
-        <h1>Start Saving</h1>
+        <h1>Save on Fun</h1>
         <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
            href="#" onclick="home()">Back</a>
 
@@ -47,33 +49,21 @@
  <div class="ui-content" role="main">
 
      <form>
-         <div id="ui-body-test" class="ui-body ui-body-a ui-corner-all" style="margin-bottom:1em;">
 
-             <ul data-role="listview" data-split-icon="gear" data-inset="true">
-                 <li>
-                     <a href="#">
-                     <img src="https://yt3.ggpht.com/a/AGF-l78OjbKCm9xpOFzl9DE2wzwl-YwMgGFTop4uJA=s900-c-k-c0xffffffff-no-rj-mo">
-                     <h2>Bell</h2>
-                     <p>Actual 80$</p>
-                     <p>Special for BMO Customer</p>
-                     <p>Monthly Plan 55$ </p>
-                     </a>
-                 </li>
-             </ul>
+         <div class="ui-body ui-body-a ui-corner-all" id="ui-body-test" style="margin-bottom:1em;">
 
-             <img src="https://image.flaticon.com/icons/svg/306/306104.svg" width="330" height="300">
+                <a href="#" class="ui-btn ui-icon-alert ui-btn-icon-left" style="color: rgb(250, 0, 0);">
+                 <p style="font-size: 12px;">Spending 80$ more than Avg</p>
+                 <p style="font-size: 12px;">Your Monthly Spending 400$ on Entertainment</p>
+                 <p style="font-size: 12px;">Gas on 1% cash back on BMO Credit</p>
+                 <p style="font-size: 12px;">Cheap Price around your location</p>
+              </a>
+
+        </div>
+
+         <div style="width: 100%; height: 600px" id="map_canvas"></div>
 
 
-             <img src="https://image.flaticon.com/icons/svg/71/71239.svg" width="330" height="100">
-
-             <div align="center">
-             <h4>Use BMO Debit\Credit Card</h4>
-             <h4>with above promo code</h4>
-            <div>
-             <button class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-carat-r ui-btn-icon-right">Get Started</button>
-
-
-         </div>
 
 
 
