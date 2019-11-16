@@ -23,42 +23,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script type="text/javascript">
-        // Load google charts
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
 
-        // Draw the chart and set the chart values
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['GAS', 8],
-          ['GAS', 2],
-          ['Entertainments', 4],
-          ['Shopping', 2],
-          ['Transport', 8],
-          ['Communication', 8],
-          ['Housing', 8],
-          ['Insurance', 8]
-        ]);
-
-
-
-          // Optional; add a title and set the width and height of the chart
-          var options = {'title':'Yours Monthly Average $ (CAD)', 'width':350, 'height':400, 'legend':'none' ,
-          pieSliceText: 'label',pieSliceTextStyle: {
-            color: 'black'
-        },
-          slices: {  1: {offset: 0.2, color: 'red'},
-                    2: {offset: 0.3, color: 'red'},
-                    5: {offset: 0.5, color: 'red'},
-          }};
-
-          // Display the chart inside the <div> element with id="piechart"
-          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-          chart.draw(data, options);
-
-
-        }
       </script>
 
 
@@ -80,7 +45,7 @@
 <div data-role="page" id="testpage">
 
     <div data-role="header">
-        <h1>Plan Your Money</h1>
+        <h1>Big Dream home</h1>
         <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
            href="#" onclick="home()">Back</a>
 
@@ -93,41 +58,43 @@
             <div class="ui-body ui-body-a ui-corner-all" id="ui-body-test" style="margin-bottom:1em;">
 
                 <a href="#" class="ui-btn ui-icon-alert ui-btn-icon-left" style="color: rgb(250, 0, 0);">
-                    <p style="font-size: 12px;">You can handle $400 unforeseen expenses</p>
+                    <p style="font-size: 12px;">Hey I see you are on your hunt for Dream home</p>
+                    <p style="font-size: 12px;">We are here to help on your journey</p>
                 </a>
 
                     <div  id="piechart" ></div>
                     <div class="ui-field-contain">
                         <ul data-role="listview" data-split-icon="gear" data-inset="true">
                             <li><a href="#">
-                                <img src="https://image.flaticon.com/icons/svg/1034/1034131.svg">
-                                <h2>Communication</h2>
-                                <p>Spending 30$ more than Avg</p></a>
-                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="com();">Purchase album</a>
+                                <img src="https://image.flaticon.com/icons/svg/1008/1008238.svg">
+                                <h2>Meet on Journey </h2>
+                                <p>We can join you on
+                                </p><p>your commute to work</p>
+                                </p><p>Help on finanical
+                                </p><p>personal assistance</p></a>
+                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="aptplace();">Purchase album</a>
                             </li>
                             <li><a href="#">
-                                <img src="https://image.flaticon.com/icons/svg/565/565374.svg">
-                                <h2>GAS</h2>
-                                <p>Spending 100$ more than Avg</p></a>
-                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="gas();">Purchase album</a>
+                                <img src="https://www.flaticon.com/premium-icon/icons/svg/774/774491.svg">
+                                <h2>Skype\Facetime\Telephone Call</h2>
+                                <p>We can dial you on
+                                </p><p>your free time</p>
+                                </p><p>Help on finanical
+                            </p><p>personal assistance</p></a>
+                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="aptplace();">Purchase album</a>
                             </li>
+
                             <li><a href="#">
-                                <img src="https://image.flaticon.com/icons/svg/390/390134.svg">
-                                <h2>Entertainments</h2>
-                                <p>Spending 80$ more than Avg</p></a>
-                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="enter();">Purchase album</a>
+                                <img src="https://image.flaticon.com/icons/svg/888/888382.svg">
+                                <h2>Greater Rates</h2>
+                                <p>We forsee your have a </p><p> good credit history eligible </p><p>for Check rates</p></a>
+                                <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="rates();">Purchase album</a>
                             </li>
                         </ul>
                     </div>
 
 
-
-
-
-
             </div>
-
-
 
         </form>
 

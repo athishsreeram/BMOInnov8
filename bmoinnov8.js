@@ -24,6 +24,16 @@ function enter() {
             window.location = base_url+"/BMOInnov8/enter.html" ;
 }
 
+function apt() {
+            var base_url = window.location.origin;
+            window.location = base_url+"/BMOInnov8/apt.html" ;
+}
+
+function aptplace() {
+            var base_url = window.location.origin;
+            window.location = base_url+"/BMOInnov8/aptplace.html" ;
+}
+
 function simpleGet(){
 
     $.get("https://bmoinnov8.ca/accounts",

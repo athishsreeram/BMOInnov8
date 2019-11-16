@@ -9,23 +9,7 @@
     <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
     <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="bmoinnov8.js"></script>
-    <script type="text/javascript"
-            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDy2qmGsbsMxPAP6w8USXf5Ey87y23uYVM&sensor=false&output=html"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-
-        map = showMap(43.653225,-79.383186);
-		addMarkersToMap(map,43.653225,-79.383186,"ESSO $2.69");
-
-        addMarkersToMap(map,43.654225,-79.383186,"COSTCO $2.39");
-
-        addMarkersToMap(map,43.657225,-79.383186,"Shell $2.49");
-
-        addMarkersToMap(map,43.651225,-79.385186,"PetroCanada $2.52");
-     });
-
-    </script>
-	<style>
+    <style>
 		.noshadow * {
 			-webkit-box-shadow: none !important;
 			-moz-box-shadow: none !important;
@@ -36,11 +20,12 @@
 		}
 	</style>
 
+
 <body>
 <div data-role="page" id="testpage">
 
     <div data-role="header">
-        <h1>Save on GAS</h1>
+        <h1>Meet on Journey</h1>
         <a class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left ui-btn-icon-notext" data-rel="home"
            href="#" onclick="home()">Back</a>
 
@@ -52,16 +37,40 @@
 
          <div class="ui-body ui-body-a ui-corner-all" id="ui-body-test" style="margin-bottom:1em;">
 
-                <a href="#" class="ui-btn ui-icon-alert ui-btn-icon-left" style="color: rgb(250, 0, 0);">
-                 <p style="font-size: 12px;">Spending 100$ more than Avg</p>
-                 <p style="font-size: 12px;">Your Monthly Spending 500$ on GAS</p>
-                 <p style="font-size: 12px;">Gas on 2% cash back on BMO Debit\Credit</p>
-                 <p style="font-size: 12px;">Cheap Price around your location</p>
-              </a>
+             <ul data-role="listview" data-split-icon="gear" data-inset="true">
+                 <li><a href="#">
+                     <img src="https://image.flaticon.com/icons/svg/1008/1008238.svg">
+                     <h2>Meet on Journey </h2>
+                     <p>We know you will be busy</p>
+                     <p>on your house hunt</p>
+                     <p>We can join you on</p>
+                     <p>your commute to work</p>
+                     <p>Help on finanical </p>
+                     <p>personal assistance</p>
+                 </a>
+                     <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" onclick="aptplace();">Purchase album</a>
+                 </li>
+
+
+
+                 <div class="ui-field-contain">
+                     <label for="name1">Date Time:</label>
+                     <input type="datetime-local" data-clear-btn="true" name="datetime-4" id="datetime-4" value="">
+                 </div>
+
+                 <div class="ui-field-contain">
+                     <label >Location:</label>
+                     <img src="https://www.flaticon.com/premium-icon/icons/svg/573/573915.svg" width="30" height="30">
+                       <input type="search" name="search-1" id="search-1" value="">
+
+                 </div>
+
+
+             </ul>
 
         </div>
 
-         <div style="width: 100%; height: 600px" id="map_canvas"></div>
+
 
 
 
